@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/xuqing1474/test/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xuqing1474/test/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>微信消息</title>
+		<style type="text/css">
+		/* 	#d1{
+				width: 200px;
+				height: 200px;
+				background: pink;
+				border-top:20px solid orangered;
+				border-bottom:20px solid blue;
+				border-left:20px solid yellow;
+				border-right:20px solid cyan;
+				
+			} */
+			.liaotian{
+				width: 500px;
+				line-height: 100px;
+				background: lawngreen;
+				padding: 50px;
+				font-size: 30px;
+				margin: 200px;
+				border-radius: 30px;
+				position: relative; /*子元素 相对定位 */
+			}
+			.liaotian:before{
+				content:""; /* "微信聊天框"字段前面的内容 */
+				display: inline-block; /* 为了设置成行块 */
+				width: 0px;
+				height: 0px;
+				background: transparent;
+				border-top: 40px solid transparent;
+				border-bottom: 40px solid transparent;
+				border-left: 40px solid transparent;
+				border-right: 40px solid lawngreen;
+				position: absolute; /* 伪元素绝对定位 */
+				left: -80px;
+				top: 60px;
+			}
+			.chat:after{
+				/* content:"after的内容" */
+				content: "";
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<p></p>
+	
+		<div class="liaotian">
+			珺珺快睡觉
+			
+		</div>
+	</body>
+</html>
